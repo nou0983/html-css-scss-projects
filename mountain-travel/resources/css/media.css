@@ -1,5 +1,5 @@
 /* *************************************** */
-/* Media Stlye */
+/* Media Style */
 /* *************************************** */
 /* Extra Large 2300px to ~ */
 @media only screen and (min-width: 2300px) {
@@ -20,30 +20,26 @@
   }
 }
 
-/* Default range */
+/* Default work done at 1920px */
 
 /* Large laptop to Desktop: 1324px ~ 1728px */
 @media only screen and (max-width: 1728px) {
   html {
-    font-size: 57%;
+    font-size: 58%;
   }
 }
 
 /* Large Tablet to Laptop: 848px ~ 1323px */
 @media only screen and (max-width: 1323px) {
   html {
-    font-size: 52%;
-  }
-
-  .section-destination .grid div {
-    padding: 1.5rem;
-  }
-
-  .section-packages .grid div {
-    padding: 5rem;
+    font-size: 53%;
   }
 
   h4 + .paragraph {
+    width: 85%;
+  }
+
+  form {
     width: 70%;
   }
 }
@@ -51,7 +47,7 @@
 /* Large Phone to Tablet: 403px ~ 847px */
 @media only screen and (max-width: 847px) {
   html {
-    font-size: 47%;
+    font-size: 48%;
   }
 
   .landing-container {
@@ -74,7 +70,7 @@
   form {
     flex-direction: column;
     flex-grow: 0;
-    width: 40%;
+    width: 55%;
     height: 15rem;
     justify-content: space-evenly;
   }
@@ -91,15 +87,20 @@
 
   footer {
     flex-direction: column;
-    height: 25rem;
-    padding: 6rem 0;
+    gap: 3rem;
+    padding: 6rem 10vw;
+    text-align: center;
   }
 }
 
 /* Extra small phone to Phone: 0px ~ 402px*/
 @media only screen and (max-width: 402px) {
   html {
-    font-size: 43%;
+    font-size: 45%;
+  }
+
+  header {
+    height: 85vh;
   }
 
   nav {
