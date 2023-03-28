@@ -1,11 +1,9 @@
-// Selectors
+// DOM Selectors
+var navIcon = document.querySelector(".nav-icon");
+var navList = document.querySelector("nav ul");
 
-var hamburger = document.querySelector('.hamburger');
-var navUl = document.querySelector('ul');
-
-// Event Listner List
-
-hamburger.addEventListener('click', function (e) {
-  e.target.classList.toggle('fa-times');
-  navUl.classList.toggle('show');
+// Event Listener
+navIcon.addEventListener("click", function (e) {
+  e.target.classList.toggle("fa-times");
+  navList.classList.toggle("show");
 });

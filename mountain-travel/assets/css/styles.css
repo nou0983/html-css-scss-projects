@@ -1,0 +1,310 @@
+/* -------------------- */
+/* General Styles */
+/* -------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #555;
+  font: 1.6rem "Lato", sans-serif;
+}
+
+/* -------------------- */
+/* Utility Styles */
+/* -------------------- */
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.2s linear;
+}
+
+nav a, footer a {
+  opacity: 0.5;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+.btn-blue {
+  display: inline-block;
+  background-color: #4052b5;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 2rem 3.5rem;
+  border-radius: 0.4rem;
+}
+
+section {
+  padding: 10rem 8%;
+  text-align: center;
+}
+
+h2 {
+  text-transform: capitalize;
+  font-size: 3.3rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+section > p {
+  width: 73%;
+  max-width: 1500px;
+  margin: 0 auto 4rem;
+}
+
+section p {
+  line-height: 3rem;
+}
+
+hr {
+  border: none;
+  height: 0.3rem;
+  margin: 0 auto 4rem;
+  width: 25%;
+  background-color: #4052b5;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fa-solid:not(footer .fa-solid) {
+  font-size: 5rem;
+  color: #6b7fef;
+}
+
+h3 {
+  text-transform: capitalize;
+  margin: 3rem 0;
+  font-size: 3rem;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+cite {
+  font-style: normal;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+cite::before {
+  content: "- ";
+}
+
+cite:not(:last-of-type) {
+  margin-bottom: 8rem;
+}
+
+/* -------------------- */
+/* Header Styles */
+/* -------------------- */
+header {
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/main-min.jpg") center/cover;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 8% 0;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.7s 0.7s linear forwards;
+          animation: fadeIn 0.7s 0.7s linear forwards;
+  align-items: center;
+}
+
+@-webkit-keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+nav > a {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+nav li:not(:last-child) {
+  margin-right: 3rem;
+}
+
+nav li > a {
+  opacity: 0.7;
+}
+
+.hero-box {
+  align-self: center;
+  text-align: center;
+  color: #fff;
+  -webkit-animation-name: slideUp;
+          animation-name: slideUp;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 6.5rem;
+}
+
+.hero-box > p {
+  font-size: 2.5rem;
+  margin: 3rem 0;
+}
+
+/* -------------------- */
+/* Section Destinations Styles */
+/* -------------------- */
+.img {
+  height: 23vw;
+  background-clip: content-box;
+  padding: 2%;
+  background-position: center;
+  background-size: cover;
+}
+
+.img-small {
+  flex-basis: 30%;
+}
+
+.img-large {
+  flex-basis: 70%;
+}
+
+/* -------------------- */
+/* Section Packages Styles */
+/* -------------------- */
+section:nth-of-type(even) {
+  background-color: #eee;
+}
+
+.section-packages li {
+  flex-basis: 50%;
+  padding: 5% 7%;
+}
+
+/* -------------------- */
+/* Section Testimonials Styles */
+/* -------------------- */
+.section-testimonials hr {
+  margin-bottom: 8rem;
+}
+
+.section-testimonials p {
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+}
+
+/* -------------------- */
+/* Section Subscribe Styles */
+/* -------------------- */
+input[type="email"] {
+  font-size: 1.8rem;
+  width: 30%;
+  padding: 1.5rem;
+  margin-right: 2rem;
+  color: #555;
+}
+
+input::-webkit-input-placeholder {
+  color: #555;
+}
+
+input::-moz-placeholder {
+  color: #555;
+}
+
+input:-ms-input-placeholder {
+  color: #555;
+}
+
+input::-ms-input-placeholder {
+  color: #555;
+}
+
+input::placeholder {
+  color: #555;
+}
+
+button.btn-blue {
+  border: none;
+  color: #fff;
+  padding: 1.8rem 3.5rem;
+}
+
+/* -------------------- */
+/* Footer Styles */
+/* -------------------- */
+footer {
+  text-transform: uppercase;
+  background-color: #607D8B;
+  padding: 3rem 8%;
+  justify-content: space-between;
+  color: #ddd;
+  font-size: 1.4rem;
+  word-spacing: 0.3rem;
+  align-items: center;
+  text-align: center;
+}
+
+.fa-brands {
+  font-size: 2.5rem;
+}
+
+footer li:not(:last-of-type) {
+  margin-right: 1rem;
+}

@@ -20,9 +20,9 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
+      gtag("js", new Date());
 
-      gtag('config', 'G-WG84L241MQ');
+      gtag("config", "G-WG84L241MQ");
     </script>
 
     <!-- Fav Icon -->
@@ -77,9 +77,9 @@
     <link rel="stylesheet" href="./resources/css/media.css" />
   </head>
   <body>
-    <div class="scroll-up">
+    <button type="button" class="scroll-up">
       <a href="#"><i class="fas fa-arrow-up"></i></a>
-    </div>
+    </button>
     <header>
       <nav class="container">
         <a href="index.html" class="logo">
@@ -91,8 +91,9 @@
           <li><a href="#section-cities">our cities</a></li>
           <li><a href="#section-contact">sign up</a></li>
         </ul>
-        <i class="fas fa-bars hamburger"></i>
-        <!-- <i class="fas fa-times hamburger"></i> -->
+        <button type="button" class="nav-icon">
+          <i class="fas fa-bars"></i>
+        </button>
       </nav>
 
       <div class="hero-box container">
@@ -311,7 +312,6 @@
         </ul>
       </section>
 
-      <!-- testimonial === review -->
       <section class="section-testimonials">
         <div class="container">
           <h2 class="font-light">OUR CUSTOMERS CAN'T LIVE WITHOUT US</h2>
@@ -420,10 +420,7 @@
           </div>
         </div>
       </section>
-      <!-- form dsata -->
-      <!--   -->
 
-      <!-- protocol? htt'p' vs FTP vs Local file protocol -->
       <section class="section-contact" id="section-contact">
         <h2 class="font-light">WE'RE HAPPY TO HEAR FROM YOU</h2>
         <hr />
@@ -474,13 +471,6 @@
           </div>
           <div>
             <label for="message">Drop us a line</label>
-            <!-- <input
-              type="text"
-              name="message"
-              placeholder="Your message"
-              required
-              id="message"
-            /> -->
             <textarea
               name="message"
               placeholder="Your message"
@@ -489,7 +479,7 @@
               class="contact-right"
             ></textarea>
           </div>
-          <input type="submit" value="제출" class="btn btn-orange" />
+          <input type="submit" class="btn btn-orange" />
         </form>
       </section>
     </main>
