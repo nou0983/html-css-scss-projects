@@ -1,0 +1,400 @@
+@use "../base/base" as b;
+
+/* 2500px ~ */
+/* XL 4k TV */
+@media only screen and (min-width: 2450px) {
+  html {
+    font-size: 75%;
+  }
+
+  .section-features {
+    margin-top: -10vh;
+  }
+
+  .section-tours {
+    padding-top: 30rem;
+  }
+
+  .card {
+    height: 45rem;
+  }
+}
+
+/* 1920px */
+/* Default Styles */
+
+/* 1324px ~ 1728px */
+/* L Mobile Large Laptop & Small Desktop */
+@media only screen and (max-width: 1728px) {
+  html {
+    font-size: 60%;
+  }
+
+  .gallery {
+    &__img {
+      &--2 {
+        left: 23rem;
+      }
+
+      &--3 {
+        left: 13rem;
+      }
+    }
+  }
+
+  .footer {
+    &__list {
+      width: 46%;
+    }
+  }
+}
+
+/* 848px ~ 1323px */
+/* M Mobile Tablet Landscape & Small Laptop */
+@media only screen and (max-width: 1323px) {
+  html {
+    font-size: 57%;
+  }
+
+  .section-info {
+    padding-top: 30rem;
+
+    &__container {
+      flex-direction: column;
+    }
+  }
+
+  .gallery {
+    &__img {
+      position: relative;
+      width: 38%;
+
+      &--1 {
+        top: 5rem;
+        left: 11rem;
+      }
+
+      &--2 {
+        top: 9rem;
+        left: 5rem;
+      }
+
+      &--3 {
+        top: 0;
+        left: 20rem;
+      }
+    }
+  }
+
+  .section-features {
+    &__list {
+      gap: 5rem;
+      justify-content: center;
+    }
+  }
+
+  .text-card {
+    flex-basis: 40%;
+  }
+
+  .section-contact {
+    &__container {
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.9),
+          rgba(255, 255, 255, 0.9)
+        ),
+        url(../img/nat-10.jpg);
+    }
+
+    &__form {
+      width: 90%;
+    }
+
+    &__input {
+      width: 66%;
+    }
+  }
+
+  .footer {
+    &__text-container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    &__list {
+      width: 70%;
+    }
+  }
+}
+
+/* 403px ~ 847px */
+/* S Mobile Landscape and Table Portrait */
+@media only screen and (max-width: 847px) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .btn-nav {
+    top: 3rem;
+    right: 4rem;
+  }
+
+  .navigation {
+    &__list {
+      top: 10rem;
+    }
+  }
+
+  .header {
+    clip-path: none;
+  }
+
+  .heading-primary {
+    &__main {
+      letter-spacing: 2.5rem;
+    }
+
+    &__sub {
+      letter-spacing: 1rem;
+      word-spacing: 0.7rem;
+    }
+  }
+
+  .section-info {
+    padding: 38rem 0;
+  }
+
+  .gallery {
+    &__img {
+      &--1 {
+        top: 5rem;
+        left: 5rem;
+      }
+
+      &--2 {
+        top: 10rem;
+        left: 6rem;
+      }
+
+      &--3 {
+        top: 6rem;
+        left: 5rem;
+      }
+    }
+  }
+
+  .section-features {
+    transform: skewY(0);
+
+    &__list {
+      transform: skewY(0);
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .text-card {
+    width: 70%;
+  }
+
+  .section-tours {
+    &__container {
+      flex-direction: column;
+      gap: 5rem;
+    }
+  }
+
+  .card {
+    height: auto;
+    width: 50%;
+    min-width: 282px;
+    border-radius: 2px;
+    @include b.shadow-style;
+
+    &:hover {
+      .card__side {
+        &--front {
+          transform: rotateY(0);
+        }
+
+        &--back {
+          transform: rotateY(0);
+        }
+      }
+    }
+
+    &__img {
+      height: 17rem;
+    }
+
+    &__side {
+      backface-visibility: visible;
+      height: auto;
+      box-shadow: none;
+
+      &--front {
+        border-radius: 2px 2px 0 0;
+      }
+
+      &--back {
+        position: static;
+        transform: rotateY(0);
+        padding: 2rem 0;
+        border-radius: 0 0 2px 2px;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        margin-top: -3rem;
+      }
+    }
+
+    &__price {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .img-card {
+    width: 100%;
+    transform: skewX(0deg);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    &__img-box {
+      width: 11vw;
+    }
+
+    > * {
+      transform: skewX(0);
+    }
+  }
+
+  .section-contact {
+    &__form {
+      width: 100%;
+      padding: 3rem;
+    }
+
+    &__input {
+      width: 80%;
+    }
+  }
+
+  .section-pop-up {
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__img {
+      width: 50%;  
+      height: 30rem;
+    }
+  }
+}
+
+/* 0 ~ 402px */
+/* XS Mobile Portrait */
+@media only screen and (max-width: 402px) {
+  html {
+    font-size: 47%;
+  }
+
+  .heading-primary {
+    &__main {
+      letter-spacing: 1.8rem;
+    }
+
+    &__sub {
+      letter-spacing: 0.7rem;
+      word-spacing: 0.5rem;
+    }
+  }
+
+  .text-card {
+    width: 100%;
+  }
+}
+
+// Image Optimize
+@media only screen and (min-width: 960px) and (min-resolution: 192dpi),
+  (min-width: 1920px) {
+  .header {
+    @include b.bg-style("../img/hero.jpg");
+  }
+
+  .section-features {
+    @include b.bg-style("../img/nat-4.jpg");
+  }
+}
+
+@media only screen and (min-width: 1075px) and (min-resolution: 192dpi),
+  (min-width: 2150px) {
+  .card {
+    &__img {
+      &--orange {
+        @include b.bg-style(
+          "../img/nat-5-large-min.jpg",
+          b.$color-secondary-light,
+          b.$color-secondary-dark
+        );
+      }
+
+      &--green {
+        @include b.bg-style("../img/nat-6-large-min.jpg");
+      }
+
+      &--blue {
+        @include b.bg-style(
+          "../img/nat-7-large-min.jpg",
+          b.$color-tertiary-light,
+          b.$color-tertiary-dark
+        );
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1140px) and (max-width: 1323px) and (min-resolution: 192dpi) {
+  .section-contact {
+    &__container {
+      background: linear-gradient(
+          105deg,
+          rgba(b.$color-white, 0.9),
+          rgba(b.$color-white, 0.9)
+        ),
+        url("../img/nat-10-large-min.jpg") center/cover;
+    }
+  }
+}
+
+@media only screen and (min-width: 1324px) and (min-resolution: 192dpi) {
+  .section-contact {
+    &__container {
+      background: linear-gradient(
+          105deg,
+          rgba(b.$color-white, 0.9),
+          rgba(b.$color-white, 0.9) 48%,
+          transparent 48%
+        ),
+        url("../img/nat-10-large-min.jpg") center/cover;
+    }
+  }
+}
+
+@media only screen and (min-width: 2280px) {
+  .section-contact {
+    &__container {
+      background: linear-gradient(
+          105deg,
+          rgba(b.$color-white, 0.9),
+          rgba(b.$color-white, 0.9) 48%,
+          transparent 48%
+        ),
+        url("../img/nat-10-large-min.jpg") center/cover;
+    }
+  }
+}
